@@ -1,0 +1,26 @@
+{
+  "name": "toDOM",
+  "version": "0.0.2",
+  "description": "JSON to DOM, JSON to HTML, fast, powerful and lightweight DOM/HTML generation from JSON",
+  "main": "toDOM.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "vows tests/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/piercus/toDOM"
+  },
+  "keywords": [
+    "DOM",
+    "HTML",
+    "JSON",
+    "djson",
+    "toDOM",
+    "toDjson"
+  ],
+  "author": "Pierre Colle <piercus@gmail.com>",
+  "license": "MIT"
+}
