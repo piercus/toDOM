@@ -176,7 +176,8 @@ sand.define("toDOM/toDOM", ["core/extend"],
                       
     /**
      *  @namespace djson-string->tag    
-     *  @desc tag is the first characters of the string before any special character (space, #, . ...) 
+     *  @desc tag is the first characters of the string before any special character (space, #, . ...)
+     * @example 
      * toDOM('bar   '); //=> &#60;bar&#62;  &#60;/bar&#62;
      *                                                               
      */        
