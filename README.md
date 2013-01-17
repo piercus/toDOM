@@ -88,7 +88,13 @@ myView.el // DOM element
 myView.helloEl // DOM element
 myView.helloEl.innerHTML // 'hello!'
 
-```
+```  
+
+### Also :
+
+* Default tag is 'div' 
+* toDOM is defined with [sandjs](https://github.com/piercus/sandjs) module manager, so you can use it with requirejs if you want to
+
 ## Installation
 
 ### With NPM
@@ -113,8 +119,8 @@ or
 ```
 
 ## Basic Usage
-	 You can use sandjs synthax to write both client and server-side code.
-	 see [sandjs](http://github.com/fjs/sandjs) for more informations on sand.js.
+You can use sandjs synthax to write both client and server-side code.
+see [sandjs](http://github.com/fjs/sandjs) for more informations on sand.js.
 
 ```javascript 
 	 var S = sand.require("Seed/Seed", function(r){
@@ -122,14 +128,8 @@ or
 		 /* code */
 	 });
 ```
-	 see [How to require a sandjs module](http://github.com/piercus/sandjs/blob/How-to-require-a-sandjs-module.md) for more ways to require toDOM
+see [How to require a sandjs module](http://github.com/piercus/sandjs/blob/How-to-require-a-sandjs-module.md) for more ways to require toDOM
 
-### Also :
-
-* Default tag is 'div' 
-* toDOM is defined with [sandjs](https://github.com/piercus/sandjs) module manager, so you can use it with requirejs if you want to
-
-### Contribute
 ## Tests
 
 run tests
@@ -141,7 +141,7 @@ test uses sandcli and run on server-side with vowsjs
 
 ## Documentation
 
-By now documentation is inside the code and uses JSDoc synthax.
+see [Documentation](http://piercus.github.com/toDOM/doc/index.html)
 
 ## TO DO
 
