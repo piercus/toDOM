@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "vows tests/*"
+    "test": "vows tests/*",
+    "doc": "node_modules/jsdoc/jsdoc toDOM.js -d ./doc/ --template ./templates/default"
   },
   "repository": {
     "type": "git",
