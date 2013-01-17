@@ -135,7 +135,7 @@ sand.define("toDOM/toDOM", ["core/extend"],
       *  @namespace djson-string->as  
       *  @desc as is set with sandjs alias synthax
       *  @example 
-      *  'a->foo' <=> { tag : 'a', as : "foo"} 
+      *  toDOM('a->foo'); //=> { tag : 'a', as : "foo"} 
       */
         as = str.split("->")[1],
         str = str.split("->")[0];
@@ -152,14 +152,16 @@ sand.define("toDOM/toDOM", ["core/extend"],
     /**
      *  @namespace djson-string->className 
      *  @desc className is set with css-selector-like synthax 
-     *  'a.a-class.an-other-class' => &#60;a class="a-class an-other-class"&#62;&#60;/a&#62; 
+     *  @example 
+     *  toDOM('a.a-class.an-other-class'); //=> &#60;a class="a-class an-other-class"&#62;&#60;/a&#62; 
      */
     (m = t.match(new RegExp("\\."+strNone, "g"))) && (className = m.map(function(e){return e.slice(1);}).join(" "));
 
     /**
      *  @namespace djson-string->id  
-     *  @desc id is set with css-selector-like synthax 
-     *  'a#an-id' => &#60;a id="an-id"&#62;&#60;/a&#62; 
+     *  @desc id is set with css-selector-like synthax
+     *  @example 
+     *  toDOM('a#an-id') //=> &#60;a id="an-id"&#62;&#60;/a&#62; 
      */
     (m = t.match(new RegExp("#"+strNone))) && (id =  m[0].slice(1));
     
@@ -168,14 +170,14 @@ sand.define("toDOM/toDOM", ["core/extend"],
      *  @desc innerHTML is set with an space, notice 
      *  NB : ' text' does not work, you need to use 'div text'
      *  @example 
-     *  'div yo yo yo ' => &#60;div&#62;yo yo yo &#60;/div&#62; 
+     *  toDOM('div yo yo yo ') //=> &#60;div&#62;yo yo yo &#60;/div&#62; 
      */   
     (m = t.match(/. .*/)) && (res.innerHTML = m[0].slice(2));
                       
     /**
      *  @namespace djson-string->tag    
      *  @desc tag is the first characters of the string before any special character (space, #, . ...) 
-     * 'bar   ' => &#60;bar&#62;  &#60;/bar&#62;
+     * toDOM('bar   '); //=> &#60;bar&#62;  &#60;/bar&#62;
      *                                                               
      */        
     (m = t.match(new RegExp("^"+strNone))) && (res.tag = m[0]); 
