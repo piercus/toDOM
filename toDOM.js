@@ -194,7 +194,7 @@ sand.define("toDOM/toDOM", ["core/extend"],
   
   
   var toDOM = function(djson, scope) {
-    var obj = djson, el, attr, els, p, q, evt, style, l;
+    var obj = djson, el, attr, els, p, q, evt, style, l, k;
     
     // 1. obj typeof disjonction
     if (typeof(obj) === "undefined" || obj === null) return (obj);

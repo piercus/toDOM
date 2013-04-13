@@ -23,5 +23,9 @@
     "toDjson"
   ],
   "author": "Pierre Colle <piercus@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "v8-profiler": "~3.6.2-1",
+    "profiler": "~1.2.1"
+  }
 }
